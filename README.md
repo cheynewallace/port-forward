@@ -18,23 +18,23 @@ The `socat` process within the container will listen by default to port 80, use 
 flag to map the port of the local machine where it will listen to traffic to be forwarded.
 
 ```
-docker run -e REMOTE_HOST=<remote_host> -e REMOTE_PORT=<remote_port> -e LOCAL_PORT=<local_port> -p <exposed_local_port>:<local_port> marcnuri/port-forward
+docker run -e REMOTE_HOST=<remote_host> -e REMOTE_PORT=<remote_port> -e LOCAL_PORT=<local_port> -p <exposed_local_port>:<local_port> cheyne/port-forward
 ```
 
 ## Examples
 
-The following commands will all forward 8080 traffic to a remote machine located at www.marcnuri.com
+The following commands will all forward 8080 traffic to a remote machine located at example.com
 in the http port
 
 ```
-docker run -e REMOTE_HOST=www.marcnuri.com -e REMOTE_PORT=80 -e LOCAL_PORT=80 -p 8080:80 marcnuri/port-forward
+docker run -e REMOTE_HOST=example.com -e REMOTE_PORT=80 -e LOCAL_PORT=80 -p 8080:80 cheyne/port-forward
 
-docker run -e REMOTE_HOST=www.marcnuri.com -e REMOTE_PORT=80 -p 8080:80 marcnuri/port-forward
+docker run -e REMOTE_HOST=example.com -e REMOTE_PORT=80 -p 8080:80 cheyne/port-forward
 
-docker run -e REMOTE_HOST=www.marcnuri.com -p 8080:80 marcnuri/port-forward
+docker run -e REMOTE_HOST=example.com -p 8080:80 cheyne/port-forward
 ```
 
 ## Docker hub
 
 Docker image hosted at Docker Hub:
-https://hub.docker.com/r/marcnuri/port-forward/
+https://hub.docker.com/repository/docker/cheyne/port-forward
