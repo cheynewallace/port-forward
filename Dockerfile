@@ -13,7 +13,7 @@ EXPOSE 80
 
 RUN echo "Installing base packages" \
     && apk add --update --no-cache \
-    socat \
+    socat ca-certificates \
     && echo "Removing apk cache" \
     && rm -rf /var/cache/apk/
 
