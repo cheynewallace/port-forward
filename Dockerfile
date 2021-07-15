@@ -8,9 +8,6 @@ ARG DEF_LOCAL_PORT=80
 ENV REMOTE_PORT=$DEF_REMOTE_PORT
 ENV LOCAL_PORT=$DEF_LOCAL_PORT
 
-## By default container listens on $LOCAL_PORT (80)
-EXPOSE 80
-
 RUN echo "Installing base packages" \
     && apk add --update --no-cache \
     socat ca-certificates \
